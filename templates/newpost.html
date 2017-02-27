@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <div style="margin-top:15%; border-style:solid; width:800px; padding:10px; background-color:gray;">
+        <h3 style="font-family: Tahoma, Verdana, Segoe, sans-serif;">New Post</h3>
+        <form  method="post">
+            <label style="font-family: Tahoma, Verdanha, Segoe, sans-serif;">Title:<br><input type="text" name="title"  style="width:500">{{title}}</label><br>
+            <label  style="font-family: Tahoma, Verdana, Segoe, sans-serif;"> Post:<br> <textarea name="post_content" style="width:500px;height:250px;" value="%(post)s">{{post_content}}</textarea></label><br>
+            <input type='submit' value='Publish'>
+        </form>
+        <p class='error'>{{error}}</p>
+    </div>
+{% endblock %}

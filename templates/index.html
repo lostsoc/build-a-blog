@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 style="font-family: Tahoma, Verdana, Segoe, sans-serif;"> Recent Posts </h3>
+    {% for p in posts %}
+        <div class="Blogposts" style="border-style:solid; width:800px; padding:10px; background-color:white;">
+            <a class="title" href="/blog/{{p.key().id()}}">{{p.title}}  </a><br>
+            <div class="post_content">{{p.post_content}}</div>
+        </div><br><br>
+{% endfor %}
+{% endblock %}
